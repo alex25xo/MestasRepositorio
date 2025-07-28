@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic-Tac-Toe con Algoritmo Minimax</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>🎮 Tic-Tac-Toe con IA</h1>
+  
+  <div class="game-section">
+    <div class="game-info">
+      <div class="status" id="status">Tu turno - Juegas con X</div>
+      <div class="score">
+        Jugador: <span id="playerScore">0</span> | 
+        IA: <span id="aiScore">0</span> | 
+        Empates: <span id="tieScore">0</span>
+      </div>
+    </div>
+    
+    <div class="tablero" id="tablero"></div>
+    
+    <div class="controls">
+      <button class="btn" onclick="reiniciarJuego()">🔄 Nuevo Juego</button>
+      <button class="btn" onclick="reiniciarPuntuacion()">📊 Reiniciar Puntuación</button>
+    </div>
+  </div>
+
+  <div class="tree-section">
+    <h2 class="tree-title">🧠 Árbol de Decisiones Minimax</h2>
+    <div class="tree-explanation">
+      El algoritmo Minimax evalúa todas las jugadas posibles. Los nodos verdes representan las mejores jugadas para cada jugador.
+      <br>Puntuación: +1 = IA gana, -1 = Jugador gana, 0 = Empate
+    </div>
+    <div id="tree"></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
